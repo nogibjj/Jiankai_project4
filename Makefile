@@ -2,8 +2,8 @@ install:
 	pip3 install --upgrade pip &&\
 		pip3 install -r requirements.txt
 
-# test:
-# 	python -m pytest  --nbval-lax *.ipynb
+test:
+	python -m pytest -vv test.py
 # 	python -m pytest -vv --cov=hello --cov=cli test_*.py
 
 format:
@@ -18,4 +18,4 @@ deploy:
 	docker tag jiankaiids706project4 862353130922.dkr.ecr.us-east-1.amazonaws.com/jiankaiids706project4
 	docker push 862353130922.dkr.ecr.us-east-1.amazonaws.com/jiankaiids706project4
 
-all: install format lint deploy
+all: install format lint test deploy
