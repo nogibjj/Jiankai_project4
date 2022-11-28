@@ -18,4 +18,4 @@ deploy:
 	docker tag jiankaiids706project4 862353130922.dkr.ecr.us-east-1.amazonaws.com/jiankaiids706project4
 	docker push 862353130922.dkr.ecr.us-east-1.amazonaws.com/jiankaiids706project4
 
-all: install format lint test deploy
+all: install format lint deploy
