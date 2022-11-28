@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-from fruitlib.ranfruit import fruit_generator
+from lib.getrand import result_generator
 
 app = FastAPI()
 
@@ -12,7 +12,7 @@ async def root():
 async def myfruit(fruit: str):
     """Adds a fruit to random fruit"""
 
-    chosen_random_fruit = fruit_generator(fruit)
+    chosen_random_fruit = result_generator(fruit)
     return {"random_fruit": chosen_random_fruit}
 
 if __name__ == '__main__':
