@@ -7,15 +7,15 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello Functions From Zero 2"}
+    return {"message": "Which country will win the world cup?"}
 
 
-@app.get("/fruits/{fruit}")
-async def myfruit(fruit: str):
+@app.get("/country/{country}")
+async def myfruit(country: str):
     """Adds a fruit to random fruit"""
 
-    chosen_random_fruit = result_generator(fruit)
-    return {"random_fruit": chosen_random_fruit}
+    chosen_random_fruit = result_generator(country)
+    return {"The champion: ": chosen_random_fruit}
 
 
 if __name__ == "__main__":
